@@ -104,7 +104,16 @@ function factorial(){
 //     7. Write a function that take start and end number as inputs
 // & display counting in your browser.
 
-
+function displayCounting() {
+    let start = parseInt(document.getElementById("startNumber").value);
+    let end = parseInt(document.getElementById("endNumber").value);
+    
+    let result = ""; 
+    for (let i = start; i <= end; i++) {
+        result += i + " "; 
+    }
+    document.getElementById("output").innerText = result;
+}
 
 // 8. Write a nested function that computes hypotenuse of a
 // right angle triangle.
@@ -197,3 +206,60 @@ function titleCase(str){
     return titleCase;
 }
 console.log(titleCase());
+
+
+//13: Write a JavaScript function that accepts two arguments, a
+// string and a letter and the function will count the number of
+
+// function | JAVASCRIPT
+
+// Page 3 of 4
+
+// occurrences of the specified letter within the string.
+// Sample arguments : 'JSResourceS.com', 'o'
+
+
+function countLetterOccurrence(str, letter){
+    var count = 0;
+    for(var i =0; i< str.length; i++){
+        if(str[i].toLowerCase()===letter.toLowerCase()){ //javascript,   a
+            count++
+        }
+    }
+ return count;
+}
+var string = prompt("Enter a string");
+var ltr= prompt("Enter a letter");
+alert(countLetterOccurrence(string, ltr))
+alert(countLetterOccurrence("jAvascripta", "A"))
+alert(countLetterOccurrence(prompt("Enter a string"), prompt("Enter a letter")))
+
+
+// 14. The Geometrizer
+// Create 2 functions that calculate properties of a circle, using
+// the definitions here.
+// Create a function called calcCircumference:
+// • Pass the radius to the function.
+// • Calculate the circumference based on the radius, and output
+// "The circumference is NN".
+// Create a function called calcArea:
+// • Pass the radius to the function.
+// • Calculate the area based on the radius, and output "The area
+// is NN".
+
+// Circumference of circle = 2πr
+// Area of circle = πr2
+
+_____________________circumfarance & area________
+var r = +prompt("Enter radius Value");
+function circumfarance(radius){
+    var pi = Math.PI
+    var circum = 2*pi*radius
+    return "The circumfarance of circle is " +circum;
+}
+function area(radius){
+    var area = Math.PI*Math.pow(radius,2)
+    return "The area of circle is " + area.toFixed(2);
+}
+console.log(circumfarance(r))
+console.log(area(r));
